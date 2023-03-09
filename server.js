@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const PORT = 8000
 
 app.use(cors())
@@ -53,7 +54,6 @@ app.get('/api/:sunSign', (request, response)=>{
     }else{
         response.json('not a zodiac sign')
     }
-    // response.json(sunSigns)
 })
 
 app.listen(process.env.PORT || PORT, ()=>{
